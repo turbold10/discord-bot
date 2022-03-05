@@ -12,7 +12,7 @@ client.login('OTQ5MjY1NDc3MzcxMzEwMDgw.YiH2Xg.RjiDf03t7mKJj_R9gsKPjqdw7as')
 
 client.on('message', (msg) => {
     if (msg.author === client.user) return
-    if (msg.content === 'hi' || msg.content === 'hello') {
+    if (msg.content === 'hi' || msg.content === 'hello' || msg.content === 'hello bot') {
         msg.channel.send('hello ' + msg.author.toString() + '👋')
         msg.react('🙌')
         return
@@ -27,8 +27,7 @@ client.on('message', (msg) => {
         const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         const dateTime = date + ' ' + time;
-        msg.reply('okay')
-        msg.channel.send(`Current time is : ${dateTime}`)
+        msg.reply(`okay\n Current time is : ${dateTime}`)
         return
     }
     msg.channel.send(msg.author.toString() + 'said : ' + msg.content)
